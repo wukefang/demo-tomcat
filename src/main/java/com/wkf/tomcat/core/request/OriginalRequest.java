@@ -12,7 +12,7 @@ public class OriginalRequest implements Request{
 
     private String url;
 
-    private String method;
+    private String method = "";
 
     public OriginalRequest(InputStream inputStream){
         this.inputStream = inputStream;
@@ -25,6 +25,7 @@ public class OriginalRequest implements Request{
             byte[] b = new byte[10240];
             int length = inputStream.read(b);
             if(length<=-1){
+                //使用postman时，每次这里都会出现一次空请求，目前还不知道为什么；
                 return ;
             }
             requestBody = new String(b,0,length,"utf-8");

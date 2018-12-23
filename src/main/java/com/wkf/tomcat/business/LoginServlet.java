@@ -1,6 +1,6 @@
 package com.wkf.tomcat.business;
 
-import com.wkf.tomcat.core.Servlet.OriginalServlet;
+import com.wkf.tomcat.core.servlet.OriginalServlet;
 import com.wkf.tomcat.core.request.Request;
 import com.wkf.tomcat.core.response.Response;
 

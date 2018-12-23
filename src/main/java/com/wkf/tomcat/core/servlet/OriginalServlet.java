@@ -1,4 +1,4 @@
-package com.wkf.tomcat.core.Servlet;
+package com.wkf.tomcat.core.servlet;
 
 import com.wkf.tomcat.core.enums.RequestMethod;
 import com.wkf.tomcat.core.request.Request;
@@ -15,7 +15,7 @@ public class OriginalServlet {
     }
 
     public void doPost(Request request,Response response){
-        response.write("No mapping Servlet,Please register your servlet");
+        response.write("No mapping servlet,Please register your servlet");
     }
 
     public void service(Request request,Response response){
@@ -23,6 +23,9 @@ public class OriginalServlet {
             doGet(request,response);
         }else if(request.method().equalsIgnoreCase(RequestMethod.POST.name())){
             doPost(request,response);
+        }else{
+            //处理postman的空请求
+            System.out.println("method not found");
         }
     }
 }

@@ -1,6 +1,6 @@
 package com.wkf.tomcat.core.server;
 
-import com.wkf.tomcat.core.Servlet.OriginalServlet;
+import com.wkf.tomcat.core.servlet.OriginalServlet;
 import com.wkf.tomcat.core.register.ServletMapper;
 import com.wkf.tomcat.core.request.OriginalRequest;
 import com.wkf.tomcat.core.request.Request;
